@@ -15,7 +15,7 @@ const Comment = require('./modules/Comment')
 const session = require('express-session')
 const flash = require('connect-flash')
 
-const PORT = config.PORT || 9000
+const PORT = process.env.PORT || config.PORT
 
 const app = express()
 app.use(express.json())
