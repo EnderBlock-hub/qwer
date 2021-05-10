@@ -631,7 +631,7 @@ ul.dc_paginationA03 li a {
 				<span><input name="password" type="password" value="" /></span>
 				</div>
 				<div class="g-recaptcha" data-sitekey="6LeR0s4aAAAAAH7RPBiM_Drnxl_eao4AgVHVQ2JW"></div>
-				<div class="text-danger" id="recaptchaError"></div>
+				<div class="text-danger" style="margin-bottom:15px" id="recaptchaError"></div>
           <% if (RegistrationError.length > 0) {%>
 			<% if (RegistrationError.length > 1) {%><div class="errorTable"><%= RegistrationError[0] %></div><%}
 			else {%><div class="errorTable"><%= RegistrationError %></div><%}%>
@@ -654,6 +654,7 @@ ul.dc_paginationA03 li a {
         <p class="link"><span>© Ещё у нас есть бот в вк:&nbsp; <a target="_blank" href="https://vk.com/bot_dg"> DG Bot</a>	</span></p> 
 </div>
 		<!-- End-wrap -->
+		<script src="https://www.google.com/recaptcha/api.js"></script>
 		<script>
 var captcha = grecaptcha.getResponse();
 var captchaError = document.getElementById('recaptchaError')
