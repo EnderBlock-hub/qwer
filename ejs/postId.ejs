@@ -798,8 +798,8 @@ ul.dc_paginationA03 li a {
 				<div class="wrap">
 					<ul>
 						<li class="current"><a href="http://localhost:9000">Главная</a></li>
-						<li><a href="http://localhost:9000/add">Добавить пост</a></li>
-						<li><a href="http://localhost:9000/profile">Профиль</a></li>
+						<li><a href="https://dgblogdg.herokuapp.com/add">Добавить пост</a></li>
+						<li><a href="https://dgblogdg.herokuapp.com/profile">Профиль</a></li>
 					</ul>
 				</div>				
 			<!-- End-Header-->
@@ -815,7 +815,7 @@ ul.dc_paginationA03 li a {
 							<h5><a href="#"><%= mass['title'] %></a></h5>
 							<p><%= mass['description'] %></p>
 							<ul>
-								<li><a <%if (mass['owner'] == user){%> href="http://localhost:9000/profile<%} else {%> href="http://localhost:9000/profile/<%= mass['owner'] %> <%} %>"><div class="author_post">Автор: <%= mass['username'] %></div></a></li>
+								<li><a <%if (mass['owner'] == user){%> href="https://dgblogdg.herokuapp.com/profile<%} else {%> href="https://dgblogdg.herokuapp.com/profile/<%= mass['owner'] %> <%} %>"><div class="author_post">Автор: <%= mass['username'] %></div></a></li>
 								<li><a href="#">Дата публикации: <%= mass['date'] %></a></li>
 							</ul>
 						</div>
@@ -838,7 +838,7 @@ ul.dc_paginationA03 li a {
                                     for (var key = commentsMass.length-1 in commentsMass) {%>
                                         <li class="body_comment_li">
                                             <div class="container_comment">
-                                                <a class="link_user" <%if (commentsMass[key]['owner'] == user){%> href="http://localhost:9000/profile<%} else {%> href="http://localhost:9000/profile/<%= commentsMass[key]['owner'] %> <%} %>"><div class="author_comment">Автор: <%= commentsMass[key]['username'] %></div></a>
+                                                <a class="link_user" <%if (commentsMass[key]['owner'] == user){%> href="https://dgblogdg.herokuapp.com/profile<%} else {%> href="https://dgblogdg.herokuapp.com/profile/<%= commentsMass[key]['owner'] %> <%} %>"><div class="author_comment">Автор: <%= commentsMass[key]['username'] %></div></a>
                                                 <div class="body_comment"><%= commentsMass[key]['body'] %></div>
                                                 <div class="date_comment">Дата: <%= commentsMass[key]['date'] %></div>
                                                 <%if (commentsMass[key]['owner'] == user){%>

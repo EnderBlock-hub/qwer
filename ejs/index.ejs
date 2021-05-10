@@ -678,8 +678,8 @@ ul.dc_paginationA03 li a {
 				<div class="wrap">
 					<ul>
 						<li class="current"><a href="http://localhost:9000">Главная</a></li>
-						<li><a href="http://localhost:9000/add">Добавить пост</a></li>
-						<li><a href="http://localhost:9000/profile">Профиль</a></li>
+						<li><a href="https://dgblogdg.herokuapp.com/add">Добавить пост</a></li>
+						<li><a href="https://dgblogdg.herokuapp.com/profile">Профиль</a></li>
 					</ul>				
 				</div>				
 			<!-- End-Header-->
@@ -692,12 +692,12 @@ ul.dc_paginationA03 li a {
                     <% for (var key = mass.length-1 in mass){%>						
 					<div class="bloger-grid">
 						<div class="bloger-content">
-							<h5><a href="http://localhost:9000/post/<%= mass[key]['id'] %>"><%= mass[key]['title'] %></a></h5>
+							<h5><a href="https://dgblogdg.herokuapp.com/post/<%= mass[key]['id'] %>"><%= mass[key]['title'] %></a></h5>
 							<p><%= mass[key]['description'] %></p>
 							<ul>
-								<li><a <%if (mass[key]['owner'] == user){%> href="http://localhost:9000/profile<%} else {%> href="http://localhost:9000/profile/<%= mass[key]['owner'] %> <%} %>"><div class="author_post">Автор: <%= mass[key]['username'] %></div></a></li>
+								<li><a <%if (mass[key]['owner'] == user){%> href="https://dgblogdg.herokuapp.com/profile<%} else {%> href="https://dgblogdg.herokuapp.com/profile/<%= mass[key]['owner'] %> <%} %>"><div class="author_post">Автор: <%= mass[key]['username'] %></div></a></li>
 								<li><a href="#">Дата публикации: <%= mass[key]['date'] %> <% if (mass[key]['changed'] === true) {%><span class="changed">(изменено)</span><%}%></a></li>
-								<li><a href="http://localhost:9000/post/<%= mass[key]['id'] %>"><span>Узнать больше</span></a></li>
+								<li><a href="https://dgblogdg.herokuapp.com/post/<%= mass[key]['id'] %>"><span>Узнать больше</span></a></li>
 							</ul>
 						</div>
 						<div class="clear"> </div>
