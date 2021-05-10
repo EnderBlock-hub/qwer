@@ -6,7 +6,6 @@
 		<title>DG Blog</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link href='//fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
-		<script src="https://www.google.com/recaptcha/api.js"></script>
     <style>
                   /* reset */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
@@ -630,17 +629,12 @@ ul.dc_paginationA03 li a {
 			<span><label>Пароль</label></span>
 				<span><input name="password" type="password" value="" /></span>
 				</div>
-				<div class="g-recaptcha" data-sitekey="6LeR0s4aAAAAAH7RPBiM_Drnxl_eao4AgVHVQ2JW"></div>
-				<div class="text-danger" style="margin-bottom:15px" id="recaptchaError"></div>
           <% if (RegistrationError.length > 0) {%>
 			<% if (RegistrationError.length > 1) {%><div class="errorTable"><%= RegistrationError[0] %></div><%}
 			else {%><div class="errorTable"><%= RegistrationError %></div><%}%>
       <%}%>
 			<div>
-			<span><input type="submit" 
-				data-sitekey="6LeR0s4aAAAAAH7RPBiM_Drnxl_eao4AgVHVQ2JW" 
-				data-callback='onSubmit' 
-				data-action='submit' value="Зарегистрироваться"></span>
+			<span><input type="submit" value="Зарегистрироваться"></span>
 			</div>
       </form>
       <div class="text_or">или</div>
@@ -654,22 +648,6 @@ ul.dc_paginationA03 li a {
         <p class="link"><span>© Ещё у нас есть бот в вк:&nbsp; <a target="_blank" href="https://vk.com/bot_dg"> DG Bot</a>	</span></p> 
 </div>
 		<!-- End-wrap -->
-		<script src="https://www.google.com/recaptcha/api.js"></script>
-		<script>
-var captcha = grecaptcha.getResponse();
-var captchaError = document.getElementById('recaptchaError')
-if (!captcha.length) {
-	captchaError.textContent = `Вы не прошли проверку "Я не робот"`
-} else {
-	captchaError.textContent = ``
-}
-
-// 3. Если форма валидна и длина капчи не равно пустой строке, то отправляем форму на сервер (AJAX)
-if ((formValid) && (captcha.length)) {
-  formData.append('g-recaptcha-response', captcha);
-}
-
-grecaptcha.reset();
 		</script>		
 	</body>
 </html>
